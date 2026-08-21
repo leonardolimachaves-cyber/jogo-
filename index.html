@@ -8,19 +8,26 @@
 </head>
 <body>
 
-  <h1>🎯 Tiro ao Alvo</h1>
-  
+  <h1>🎯 Desafio do Tiro ao Alvo</h1>
+
   <div id="game-container">
-    <div id="score-board">Pontuação: <span id="score">0</span></div>
-    
-    <div id="target-area">
-      <!-- Anéis de pontuação concêntricos -->
-      <div class="ring ring-5" data-points="5">
-        <div class="ring ring-10" data-points="10">
-          <div class="ring ring-20" data-points="20">
-            <div class="ring ring-30" data-points="30">
-              <div class="ring ring-40" data-points="40">
-                <div class="ring ring-50" data-points="50"></div>
+    <!-- Painel de Informações -->
+    <div id="status-bar">
+      <div class="stat-box">Pontuação: <span id="score">0</span></div>
+      <div class="stat-box">Tempo: <span id="timer">30</span>s</div>
+      <div class="stat-box">Recorde: <span id="high-score">0</span></div>
+    </div>
+
+    <!-- Área onde o alvo vai navegar -->
+    <div id="play-area">
+      <div id="target">
+        <div class="ring ring-5" data-points="5">
+          <div class="ring ring-10" data-points="10">
+            <div class="ring ring-20" data-points="20">
+              <div class="ring ring-30" data-points="30">
+                <div class="ring ring-40" data-points="40">
+                  <div class="ring ring-50" data-points="50"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -28,7 +35,14 @@
       </div>
     </div>
 
-    <button id="reset-btn">Zerar Pontuação</button>
+    <!-- Tela de Fim de Jogo -->
+    <div id="overlay" class="hidden">
+      <div class="modal">
+        <h2>Fim de Jogo! 🎮</h2>
+        <p>Sua pontuação final foi: <strong id="final-score">0</strong></p>
+        <button id="start-btn">Jogar Novamente</button>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
