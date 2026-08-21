@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  user-select: none;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#score-board {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: #2a2a2a;
+  padding: 10px 25px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Área de Clique do Alvo */
+#target-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  cursor: crosshair;
+}
+
+/* Anéis do Alvo */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.05s ease;
+}
+
+.ring:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+/* Tamanhos e Cores dos Anéis */
+.ring-5 {
+  width: 400px;
+  height: 400px;
+  background-color: #333333;
+  border: 2px solid #555;
+}
+
+.ring-10 {
+  width: 333px;
+  height: 333px;
+  background-color: #2196F3;
+}
+
+.ring-20 {
+  width: 266px;
+  height: 266px;
+  background-color: #4CAF50;
+}
+
+.ring-30 {
+  width: 200px;
+  height: 200px;
+  background-color: #FFEB3B;
+}
+
+.ring-40 {
+  width: 133px;
+  height: 133px;
+  background-color: #FF9800;
+}
+
+.ring-50 {
+  width: 66px;
+  height: 66px;
+  background-color: #F44336;
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.8);
+}
+
+/* Botão de Reiniciar */
+#reset-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#reset-btn:hover {
+  background-color: #d32f2f;
+}

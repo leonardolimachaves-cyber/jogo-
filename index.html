@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Tiro ao Alvo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎯 Tiro ao Alvo</h1>
+  
+  <div id="game-container">
+    <div id="score-board">Pontuação: <span id="score">0</span></div>
+    
+    <div id="target-area">
+      <!-- Anéis de pontuação concêntricos -->
+      <div class="ring ring-5" data-points="5">
+        <div class="ring ring-10" data-points="10">
+          <div class="ring ring-20" data-points="20">
+            <div class="ring ring-30" data-points="30">
+              <div class="ring ring-40" data-points="40">
+                <div class="ring ring-50" data-points="50"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="reset-btn">Zerar Pontuação</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
